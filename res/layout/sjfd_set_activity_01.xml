@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:heima="http://schemas.android.com/apk/res/com.example.mobilesafe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/sjfd_guide_set_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/title"
+            android:gravity="left"
+            android:text="1.欢迎使用手机防盗" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="您的手机防盗卫士:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:drawableLeft="@drawable/dialog_title_default_icon"
+            android:gravity="center_vertical"
+            android:text="SIM卡变更报警"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/dialog_title_default_icon"
+            android:gravity="center_vertical"
+            android:text="GPS追踪"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/dialog_title_default_icon"
+            android:gravity="center_vertical"
+            android:text="远程锁屏"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/dialog_title_default_icon"
+            android:gravity="center_vertical"
+            android:text="远程销毁数据"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/sjfd_guide_set_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:onClick="preStartActivty"
+            android:id="@+id/bt_pre_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/setpwd_dialog_ok"
+            android:drawableLeft="@drawable/pre"
+            android:text="上一步"
+            android:textColor="#fff" 
+            android:visibility="invisible"/>
+
+
+        <Button
+             android:onClick="nextStartActivity"
+            android:id="@+id/bt_next_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/setpwd_dialog_ok"
+            android:drawableRight="@drawable/next"
+            android:text="下一步"
+            android:textColor="#fff" />
+        <com.example.mobilesafe.views.ImagePointLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            heima:point="0" >
+        </com.example.mobilesafe.views.ImagePointLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sjfd_guide_set_bottom"
+        android:layout_below="@+id/sjfd_guide_set_head"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/step_1" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:heima="http://schemas.android.com/apk/res/com.example.mobilesafe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/sjfd_guide_set_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/title"
+            android:gravity="left"
+            android:text="3.设置安全号码" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="SIM卡如果发生变化:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:text="报警短信就会发送给安全号码"
+            android:textSize="15sp" />
+		<EditText
+		    android:layout_marginTop="8dp"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:hint="请输入安全号码"/>
+		
+		<TextView
+		    android:layout_marginTop="8dp"
+		    style="@style/title"
+		    android:text="选择安全号码"/>
+       
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/sjfd_guide_set_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+           android:onClick="preStartActivity"
+            android:id="@+id/bt_pre_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/setpwd_dialog_ok"
+            android:drawableLeft="@drawable/pre"
+            android:text="上一步"
+            android:textColor="#fff" 
+            />
+
+
+        <Button
+             android:onClick="nextStartActivity"
+            android:id="@+id/bt_next_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/setpwd_dialog_ok"
+            android:drawableRight="@drawable/next"
+            android:text="下一步"
+            android:textColor="#fff" />
+        <com.example.mobilesafe.views.ImagePointLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            heima:point="2" >
+        </com.example.mobilesafe.views.ImagePointLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sjfd_guide_set_bottom"
+        android:layout_below="@+id/sjfd_guide_set_head"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/step_3" />
+    </RelativeLayout>
+
+</RelativeLayout>

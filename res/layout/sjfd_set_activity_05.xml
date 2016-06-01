@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:heima="http://schemas.android.com/apk/res/com.example.mobilesafe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/sjfd_guide_set_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/title"
+            android:gravity="left"
+            android:text="5.恭喜您设置完成" />
+
+      <CheckBox
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="选中开启防盗保护"/>
+		</LinearLayout>
+       
+  
+    <RelativeLayout
+        android:id="@+id/sjfd_guide_set_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:onClick="preStartActivity"
+            android:id="@+id/bt_pre_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/setpwd_dialog_ok"
+            android:drawableLeft="@drawable/pre"
+            android:text="上一步"
+            android:textColor="#fff" 
+            />
+
+        <Button
+             android:onClick="nextStartActivity"
+            android:id="@+id/bt_next_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/setpwd_dialog_ok"
+            android:drawableRight="@drawable/next"
+            android:text="下一步"
+            android:textColor="#fff" />
+        
+        <com.example.mobilesafe.views.ImagePointLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            heima:point="4" >
+        </com.example.mobilesafe.views.ImagePointLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sjfd_guide_set_bottom"
+        android:layout_below="@+id/sjfd_guide_set_head"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/step_5" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!-- 背景图片 -->
+    <item android:state_pressed="true" android:drawable="@drawable/setting_bk_1"></item>
+
+    <!-- 默认图片 -->
+    <item android:drawable="@drawable/setting_bk"></item>
+</selector>

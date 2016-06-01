@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <declare-styleable name="SettingItemView">
+           <attr name="title" format="string" />
+           <attr name="isopen" format="boolean" />
+            
+        </declare-styleable>
+        <declare-styleable name="ImagePointLayout">
+            <attr name="point" format="integer"></attr>
+        </declare-styleable>
+</resources>

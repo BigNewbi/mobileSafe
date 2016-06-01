@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:heima="http://schemas.android.com/apk/res/com.example.mobilesafe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/sjfd_guide_set_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/title"
+            android:gravity="left"
+            android:text="2.手机卡绑定" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="通过绑定SIM卡:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:text="下次重启手机如果发现SIM卡变化,就会\n发送警报短信"
+            android:textSize="15sp" />
+		<RelativeLayout
+		    android:layout_marginTop="8dp"
+		   android:gravity="center_vertical"
+		    android:background="#5CB2E7"
+		    android:padding="8dp"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content">
+		    <ImageView
+		        android:layout_alignParentRight="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/unlock"/>
+
+		    <TextView
+		        android:textSize="15sp"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_centerVertical="true"
+		        android:text="点击绑定/解绑SIM卡"
+		        android:textColor="#fff" />
+
+		   </RelativeLayout> 
+       
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/sjfd_guide_set_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+             android:onClick="preStartActivity"
+            android:id="@+id/bt_pre_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/setpwd_dialog_ok"
+            android:drawableLeft="@drawable/pre"
+            android:text="上一步"
+            android:textColor="@color/button_text_ok" 
+            />
+
+
+        <Button
+             android:onClick="nextStartActivity"
+            android:id="@+id/bt_next_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/setpwd_dialog_ok"
+            android:drawableRight="@drawable/next"
+            android:text="下一步"
+            android:textColor="@color/button_text_ok" />
+        
+        <com.example.mobilesafe.views.ImagePointLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            heima:point="1" >
+        </com.example.mobilesafe.views.ImagePointLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sjfd_guide_set_bottom"
+        android:layout_below="@+id/sjfd_guide_set_head"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/step_2" />
+    </RelativeLayout>
+
+</RelativeLayout>

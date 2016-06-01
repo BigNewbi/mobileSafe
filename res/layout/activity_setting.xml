@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:heima="http://schemas.android.com/apk/res/com.example.mobilesafe"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mobilesafe.activitys.SettingActivity" >
+
+    <TextView
+        style="@style/title"
+        android:text="设置中心" />
+
+    <com.example.mobilesafe.views.SettingItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/first_normal"
+        android:onClick="change"
+        heima:isopen="true"
+        heima:title="自动更新设置" >
+    </com.example.mobilesafe.views.SettingItemView>
+
+    <com.example.mobilesafe.views.SettingItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/last_normal"
+        android:onClick="change"
+        heima:isopen="true"
+        heima:title="骚扰拦截设置" >
+    </com.example.mobilesafe.views.SettingItemView>
+
+</LinearLayout>
